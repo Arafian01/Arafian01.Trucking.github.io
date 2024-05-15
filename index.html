@@ -8,36 +8,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <style>
-      .bg-dark{
+      .bg-primary{
         background: transparent !important;
         transition: 0.5s ease;
       }
-      .bg-dark.scrolled{
-        background: #000 !important;
+      .bg-primary.scrolled{
+        background: #003366 !important;
       }
     </style>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
+        <div class="container-fluid gap-4 mx-4">
+          <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid" style="height: 50px;">
+          <a class="navbar-brand" href="#">Garuda Transindo</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link btn btn-outline-danger active px-3 text-white" aria-current="page" href="#"> Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link btn btn-outline-danger px-3 text-white" href="#">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Service</a>
+                <a class="nav-link btn btn-outline-danger px-3 text-white" href="#">Service</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link btn btn-outline-danger px-3 text-white" href="#">Contact</a>
               </li>
             </ul>
           </div>
@@ -47,12 +48,13 @@
       <section class=" vh-100">
         <video class="img-fluid w-100 position-absolute bottom-0 end-0" src="asset/video/lv_0_20240514131133.mp4" autoplay loop muted>
         </video>
-        <div class="row position-absolute">
-          <div class="col-6 offset-1">
-            <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-              <div class="text-white bg-dark p-3 rounded-4 bg-opacity-50">
-                <p class="fs-1 fw-bold">Trucking</p>
-                <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad delectus error ipsam, reprehenderit iste aut inventore. Voluptas, illum ratione odio libero deleniti illo iure enim, beatae eligendi nostrum aut cupiditate!</p>
+        <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+          <div class="card bg-dark bg-opacity-50">
+            <div class="card-body">
+              <div class="text-white p-3 rounded-4 bg-opacity-50 text-center">
+                <h1 class="fw-bold fs-1">Garuda Transindo</h1>
+                <p class="fs-4 fw-bold">Melayani Pengiriman dengan Kecepatan dan Keandalan</p>
+                <button type="button" class="btn btn-danger px-5  text-white">Hubungi Kami</button>
               </div>
             </div>
           </div>
@@ -61,33 +63,67 @@
 
       <section class="vh-100">
         <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-          <div class="row">
-            <div class="col-6 d-flex align-items-center">
-              <div>
-                <p class="fs-1 fw-bold text-center">SOLUSI TRANSPORTASI</p>
-                <p>PGT dapat memenuhi kebutuhan pengiriman Anda. Melalui jaringan kami yang luas dan beragam penawaran layanan, kami diperlengkapi untuk mengangkut komoditas apa pun dengan aman dan efisien. Kami berinvestasi dalam menerapkan strategi berpikiran maju untuk meningkatkan kapasitas, mengurangi emisi karbon, dan menciptakan tarif angkutan yang lebih ekonomis.</p>
-                <a class="btn btn-outline-primary">Learn More About Our Service</a>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div>
+                    <p class="fs-3 fw-bold">Tentang Perusahaan :</p>
+                    <p>Garuda Transindo adalah perusahaan logistik terkemuka yang berkomitmen untuk menyediakan solusi transportasi yang efisien dan handal di seluruh Indonesia. Dengan armada truk modern dan tim profesional berpengalaman, kami siap mengantarkan barang Anda dengan aman dan tepat waktu. Kami bangga menjadi mitra terpercaya bagi berbagai industri dalam memenuhi kebutuhan pengiriman mereka.</p>
+                    <p class="fs-3 fw-bold">Misi Utama :</p>
+                    <p>Misi utama kami adalah memberikan layanan logistik yang unggul melalui inovasi, keandalan, dan dedikasi terhadap kepuasan pelanggan. Kami bertekad untuk terus meningkatkan standar layanan kami dengan mengadopsi teknologi terbaru dan praktik terbaik dalam industri, serta memastikan bahwa setiap pengiriman dilakukan dengan tingkat akurasi dan kecepatan yang tinggi.</p>
+                    <a class="btn btn-outline-danger">Cari tahu lebih lanjut mengenai pelayanan kami</a>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
+                </div>
               </div>
-            </div>
-            <div class="col-6">
-              <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
             </div>
           </div>
         </div>
       </section>
 
-      <section class="vh-100">
-        <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-          <div class="row">
-            <div class="col-6 d-flex align-items-center">
-              <div>
-                <p class="fs-1 fw-bold text-center">SOLUSI TRANSPORTASI</p>
-                <p>PGT dapat memenuhi kebutuhan pengiriman Anda. Melalui jaringan kami yang luas dan beragam penawaran layanan, kami diperlengkapi untuk mengangkut komoditas apa pun dengan aman dan efisien. Kami berinvestasi dalam menerapkan strategi berpikiran maju untuk meningkatkan kapasitas, mengurangi emisi karbon, dan menciptakan tarif angkutan yang lebih ekonomis.</p>
-                <a class="btn btn-outline-primary">Learn More About Our Service</a>
+      <section class="vh-100 bg-secondary">
+        <div class="container">
+          <div class="min-vh-100 d-flex justify-content-center align-items-center">
+            <div class="">
+              <p class="fs-1 fw-bold text-center text-uppercase py-5 text-white">Layanan Kami</p>
+              <div class="row row-cols-1 row-cols-md-4 g-5 text-center">
+                <div class="col">
+                  <div class="card p-4" style="height: 300px;">
+                    <i class="bi bi-person" style="font-size: 100px;"></i>
+                    <div class="card-body">
+                      <p class="card-text">become a</p>
+                      <h5 class="card-title">Costumer</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a short card.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-6">
-              <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
             </div>
           </div>
         </div>
