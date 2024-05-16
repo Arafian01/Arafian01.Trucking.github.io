@@ -12,6 +12,10 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
   <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
     .bg-primary {
       background: transparent !important;
       transition: 0.5s ease;
@@ -45,6 +49,12 @@
     }
     .imgBnW:hover{
       filter: grayscale(0%) ;
+    }
+    .imgbg{
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
     }
   </style>
 </head>
@@ -80,7 +90,7 @@
     </div>
   </nav>
 
-  <section class=" vh-100">
+  <section class=" vh-100" id="hero">
     <video class="img-fluid w-100 position-absolute bottom-0 end-0 z-0" src="asset/video/lv_0_20240514131133.mp4"
       autoplay loop muted>
     </video>
@@ -104,7 +114,7 @@
     </div>
   </section>
 
-  <section class="vh-100">
+  <section class="vh-100" id="intro">
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
       <div class="card rounded shadow p-3 mb-5 rounded">
         <div class="card-body">
@@ -168,46 +178,71 @@
     </div>
   </section>
 
-  <section class="vh-100 bg-secondary">
-    <div class="container">
-      <div class="min-vh-100 d-flex justify-content-center align-items-center">
-        <div class="">
-          <p class="fs-1 fw-bold text-center text-uppercase mb-5 text-white">Layanan Kami</p>
-          <div class="row row-cols-1 row-cols-md-3">
-            <div class="col px-5">
-              <div class="card" style="height: 400px;">
-                <div class="card-body text-center">
-                  <img src="asset/img/cargo-truck_936784.png" class="py-5" alt="img-logo" style="width: 100px;">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
+  <section class="vh-100 p-0" id="service">
+    <div class="d-flex">
+      <div >
+        <div class="imgbg border" style="background-image: url('asset/img/man-working-as-truck-driver2.jpg');"></div>
+      </div>
+      <div>
+        <div class="imgbg" style="background-image: url('asset/img/man-working-as-truck-driver-posing2.jpg');"></div>
+      </div>
+      <div>
+        <div class="imgbg" style="background-image: url('asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg');"></div>
+      </div>
+    </div>
+    <!-- <div class="position-absolute min-vh-100 d-flex z-1">
+      <div class="imgbg" style="background-image: url('/asset/img/man-working-as-truck-driver2.jpg');">
+        <div class="card">
+          <div class="card-body">
+            <img src="asset/img/cargo-truck_936784.png" class="py-5" alt="img-logo" style="width: 100px;">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="position-absolute min-vh-100 d-flex align-items-center z-1 w-100">
+      <div class="container">
+        <div class="d-flex justify-content-center gap-5">
+          <div class="card cardgs" style="width: 20rem;">
+            <div class="card-body">
+              <img src="asset/img/cargo-truck_936784.png" class="py-5" alt="img-logo" style="width: 100px;">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.</p>
             </div>
-            <div class="col px-5">
-              <div class="card h-100">
-                <div class="card-body text-center">
-                  <img src="asset/img/delivery_9815331.png" class="py-5" alt="img-logo" style="width: 100px;">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a short card.</p>
-                </div>
-              </div>
+          </div>
+          <div class="card cardgs" style="width: 20rem;">
+            <div class="card-body">
+              <img src="asset/img/cargo-truck_936784.png" class="py-5" alt="img-logo" style="width: 100px;">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.</p>
             </div>
-            <div class="col px-5">
-              <div class="card h-100">
-                <div class="card-body text-center">
-                  <img src="asset/img/airplane-around-earth_45873.png" class="py-5" alt="img-logo"
-                    style="width: 100px;">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content.</p>
-                </div>
-              </div>
+          </div>
+          <div class="card cardgs" style="width: 20rem;">
+            <div class="card-body">
+              <img src="asset/img/cargo-truck_936784.png" class="py-5" alt="img-logo" style="width: 100px;">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="d-flex justify-content-center z-0">
+      <div class="">
+        <img src="asset/img/man-working-as-truck-driver2.jpg" alt="" class="img-fluid imgbg">
+      </div>
+      <div class="">
+        <img src="asset/img/man-working-as-truck-driver-posing2.jpg" alt="" class="img-fluid imgbg">
+      </div>
+      <div class="col-4">
+        <img src="asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg" alt="" class="img-fluid imgbg">
+      </div>
+    </div> -->
   </section>
 
   <section class="vh-100">
@@ -363,6 +398,7 @@
     $(window).scroll(function () {
       $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
     });
+    
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
