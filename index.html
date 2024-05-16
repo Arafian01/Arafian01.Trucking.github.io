@@ -40,6 +40,12 @@
     .gradient-custom {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
     }
+    .imgBnW{
+      filter: grayscale(100%);
+    }
+    .imgBnW:hover{
+      filter: grayscale(0%) ;
+    }
   </style>
 </head>
 
@@ -105,6 +111,21 @@
           <div class="container p-3">
             <div class="row">
               <div class="col-6 d-flex align-items-center">
+                <div id="carouselImg" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt="" class="w-100 rounded-4">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="asset/img/plane-that-has-word-sa-it.jpg" alt="" class="w-100 rounded-4">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 d-flex align-items-center">
                 <div>
                   <p class="fs-3 fw-bold">Tentang Perusahaan :</p>
                   <p>Garuda Transindo adalah perusahaan logistik terkemuka yang berkomitmen untuk menyediakan solusi
@@ -118,11 +139,27 @@
                     dengan mengadopsi teknologi terbaru dan praktik terbaik dalam industri, serta memastikan bahwa
                     setiap
                     pengiriman dilakukan dengan tingkat akurasi dan kecepatan yang tinggi.</p>
-                  <a class="btn btn-outline-danger">Cari tahu lebih lanjut mengenai pelayanan kami</a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="grid">
+                  <div class="row">
+                    <div class="col-2">
+                      <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                    </div>
+                    <div class="col-2">
+                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt="" class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
+                    </div>
+                    <div class="col-2">
+                      <img src="asset/img/plane-that-has-word-sa-it.jpg " alt="" class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-6">
-                <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
+                <a class="btn btn-outline-danger">Cari tahu lebih lanjut mengenai pelayanan kami</a>
               </div>
             </div>
           </div>
