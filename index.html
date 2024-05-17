@@ -12,10 +12,12 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
   <style>
-    body{
+    body {
       margin: 0;
       padding: 0;
+      overflow-x:hidden;
     }
+
     .bg-primary {
       background: transparent !important;
       transition: 0.5s ease;
@@ -44,21 +46,32 @@
     .gradient-custom {
       background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
     }
-    .imgBnW{
+
+    .imgBnW {
       filter: grayscale(100%);
     }
-    .imgBnW:hover{
-      filter: grayscale(0%) ;
+
+    .imgBnW:hover {
+      filter: grayscale(0%);
     }
-    .imgbg{
+
+    .imgbg {
       background-position: center;
       background-size: cover;
     }
-    .imgbg{
+
+    .imgbg {
       filter: grayscale(100%);
     }
-    .cardS:hover, .imgbg:hover{
+
+    .cardS:hover,
+    .imgbg:hover,
+    .imgbg:hover .textTesty  {
       filter: grayscale(0%);
+      color: white !important;
+    }
+    .card-title,.card-text{
+      color: black !important;
     }
   </style>
 </head>
@@ -131,7 +144,8 @@
                       <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
                     </div>
                     <div class="carousel-item">
-                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt="" class="w-100 rounded-4">
+                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
+                        class="w-100 rounded-4">
                     </div>
                     <div class="carousel-item">
                       <img src="asset/img/plane-that-has-word-sa-it.jpg" alt="" class="w-100 rounded-4">
@@ -161,13 +175,18 @@
                 <div class="grid">
                   <div class="row">
                     <div class="col-2">
-                      <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                      <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="img-fluid imgBnW"
+                        data-bs-target="#carouselImg" data-bs-slide-to="0" class="active" aria-current="true"
+                        aria-label="Slide 1">
                     </div>
                     <div class="col-2">
-                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt="" class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
+                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
+                        class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1" aria-current="true"
+                        aria-label="Slide 2">
                     </div>
                     <div class="col-2">
-                      <img src="asset/img/plane-that-has-word-sa-it.jpg " alt="" class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+                      <img src="asset/img/plane-that-has-word-sa-it.jpg " alt="" class="img-fluid imgBnW"
+                        data-bs-target="#carouselImg" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
                     </div>
                   </div>
                 </div>
@@ -183,8 +202,10 @@
   </section>
 
   <section class="vh-100 p-0" id="service">
-    <div class="row">
-      <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center cardS" style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
+    <div class="row" style="max-width: 220vh;">
+      
+      <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
+        style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
         <div class="card my-5 cardS" style="width: 18rem;">
           <div class="card-body text-center">
             <img src="asset/img/cargo-truck_936784.png" class="py-5" alt="img-logo" style="width: 80px;">
@@ -193,16 +214,23 @@
           </div>
         </div>
       </div>
-      <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center" style="background-image: url(asset/img/man-working-as-truck-driver-posing2.jpg);">
-        <div class="card my-5 cardS" style="width: 18rem;">
-          <div class="card-body text-center">
-            <img src="asset/img/delivery_9815331.png" class="py-5" alt="img-logo" style="width: 80px;">
-            <h5 class="card-title">Express Delivery</h5>
-            <p class="card-text">Pengiriman cepat dengan waktu yang tepat dan pelayanan terbaik.</p>
+      <div class="col-4 img-fluid imgbg min-vh-100 d-flex justify-content-center z-0"
+        style="background-image: url(asset/img/man-working-as-truck-driver-posing2.jpg);">
+        <div class="position-absolute text-center z-1">
+          <h1 class="fw-bold mt-5 text-uppercase textTesty">Testimony</h1>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="card my-5 cardS" style="width: 18rem;">
+            <div class="card-body text-center">
+              <img src="asset/img/delivery_9815331.png" class="py-5" alt="img-logo" style="width: 80px;">
+              <h5 class="card-title">Express Delivery</h5>
+              <p class="card-text">Pengiriman cepat dengan waktu yang tepat dan pelayanan terbaik.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center" style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
+      <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
+        style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
         <div class="card my-5 cardS" style="width: 18rem;">
           <div class="card-body text-center">
             <img src="asset/img/airplane-around-earth_45873.png" class="py-5" alt="img-logo" style="width: 80px;">
@@ -214,21 +242,152 @@
     </div>
   </section>
 
-  <section class="vh-100">
-    <div class="container">
-      <div class="min-vh-100 d-flex align-items-center justify-content-center">
-        <div>
-          <div class="row py-5">
-            <div class="col-6">
-              <h1 class="d-flex align-middle">Testimoni</h1>
-            </div>
-            <div class="col-6 d-flex justify-content-end">
-              <a class="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"><i
-                  class="bi bi-arrow-left-square img-fluid" style="font-size: 20px;"></i></a>
-              <a class="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"><i
-                  class="bi bi-arrow-right-square" style="font-size: 20px;"></i></a>
+  <section class="vh-100 mt-5">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="min-vh-100 d-flex align-items-center">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                      <h4 class="card-title">BAPAK</h4>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev bg-dark" style="height: 100px !important; top: 300px; width: 100px;" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next bg-dark" style="height: 100px !important; top: 300px; width: 100px;" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <!-- <div class="container">
+      <div class="row py-5">
+        <h1 class="d-flex align-middle">Testimoni</h1>
+      </div>
           <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -356,6 +515,12 @@
         </div>
       </div>
     </div>
+    <div class="col-6 d-flex justify-content-end">
+      <a class="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"><i
+          class="bi bi-arrow-left-square img-fluid" style="font-size: 20px;"></i></a>
+      <a class="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"><i
+          class="bi bi-arrow-right-square" style="font-size: 20px;"></i></a>
+    </div> -->
   </section>
 
   <footer class="py-2">
@@ -367,7 +532,7 @@
     $(window).scroll(function () {
       $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
     });
-    
+
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
