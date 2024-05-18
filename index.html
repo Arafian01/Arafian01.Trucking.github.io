@@ -18,21 +18,22 @@
       overflow-x: hidden;
     }
 
-    .bg-primary {
+    .nav-link:hover {
+      border-bottom: 375 rem;
+      transition: 0.3s ease;
+    }
+
+    .bg-primary2 {
       background: transparent !important;
       transition: 0.5s ease;
     }
 
-    .bg-primary.scrolled {
+    .bg-primary2.scrolled {
       background: #003366 !important;
     }
 
     .card-img-top {
       width: 100px;
-    }
-
-    footer {
-      background: #003366;
     }
 
     .text-underline-hover {
@@ -66,18 +67,27 @@
 
     .cardS:hover,
     .imgbg:hover,
-    .imgbg:hover .textTesty {
+    .imgbg:hover .text-s {
       filter: grayscale(0%);
       transition: 0.5s ease;
       color: white !important;
       text-shadow: 4px 4px #1c1c1c;
+      cursor: pointer;
+      text-decoration: none;
     }
-    .gone{
-      font-size: 200px; 
-      top: 220px; 
+
+    .text-s {
+      text-decoration: none;
+      color: black;
+    }
+
+    .gone {
+      font-size: 200px;
+      top: 220px;
       right: 50px;
     }
-    .imgbg:hover .gone{
+
+    .imgbg:hover .gone {
       opacity: 0;
       transition: 0.5s ease-in;
     }
@@ -86,18 +96,6 @@
       transform: scale(1.1);
       transition: 0.5s ease;
     }
-    
-    .come{
-      opacity: 0;
-    }
-    .imgbg:hover .come{
-      opacity: 1;
-      transition: 0.2s;
-      cursor: pointer;
-      color: #CC0000;
-      text-shadow: none;
-    }
-
 
     .star {
       width: 15px;
@@ -116,6 +114,7 @@
       border-radius: 50px;
       cursor: pointer;
     }
+
     .scroll-down::before,
     .scroll-down::after {
       content: "";
@@ -130,6 +129,7 @@
       border-left: transparent;
       animation: scroll-down 1s ease-in-out infinite;
     }
+
     .scroll-down::before {
       top: 30%;
       animation-delay: 0.3s;
@@ -141,12 +141,15 @@
         /* top:20%; */
         opacity: 0;
       }
+
       30% {
         opacity: 1;
       }
+
       60% {
         opacity: 1;
       }
+
       100% {
         top: 90%;
         opacity: 0;
@@ -157,7 +160,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg fixed-top bg-primary2" data-bs-theme="dark">
     <div class="container-fluid gap-4 mx-4">
       <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
         style="height: 50px;">
@@ -167,9 +170,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 ">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 nav-underline">
           <li class="nav-item">
-            <a class="nav-link active px-3 text-white border-bottom border-white border-3" aria-current="page" href="#">
+            <a class="nav-link active px-3 text-white border-3" aria-current="page" href="#">
               Home</a>
           </li>
           <li class="nav-item">
@@ -209,7 +212,7 @@
       </div>
     </div>
     <a href="#intro">
-    <div class="scroll-down z-1 text-white"></div>
+      <div class="scroll-down z-1 text-white"></div>
     </a>
   </section>
 
@@ -264,8 +267,8 @@
                       </div>
                       <div class="col-2">
                         <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
-                          class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1" aria-current="true"
-                          aria-label="Slide 2">
+                          class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1"
+                          aria-current="true" aria-label="Slide 2">
                       </div>
                       <div class="col-2">
                         <img src="asset/img/plane-that-has-word-sa-it.jpg " alt="" class="img-fluid imgBnW"
@@ -292,7 +295,9 @@
         <h1 class="position-absolute z-0 text-white gone font-monospace">01</h1>
         <div class="my-5 cardS z-1">
           <div class="text-center">
-            <h2 class="card-title fw-bold">General Freight</h2>
+            <a href="service.html" class="text-s">
+              <h2 class="card-title fw-bold">General Freight</h2>
+            </a>
           </div>
         </div>
       </div>
@@ -305,7 +310,9 @@
         <div class="d-flex align-items-center">
           <div class="my-5 cardS z-1">
             <div class="text-center">
-              <h2 class="card-title fw-bold">Express Delivery</h2>
+              <a href="service.html" class="text-s">
+                <h2 class="card-title fw-bold">Express Delivery</h2>
+              </a>
             </div>
           </div>
         </div>
@@ -315,7 +322,9 @@
         <h1 class="position-absolute z-0 text-white gone font-monospace">03</h1>
         <div class=" my-5 cardS z-1">
           <div class=" text-center">
-            <h2 class="card-title fw-bold">International Shipping <i class="bi bi-arrow-right-circle come"></i></h2>
+            <a href="service.html" class="text-s">
+              <h2 class="card-title fw-bold">International Shipping</h2>
+            </a>
           </div>
         </div>
       </div>
@@ -345,7 +354,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -368,7 +377,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -391,7 +400,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -466,7 +475,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -489,7 +498,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -512,7 +521,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -541,7 +550,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -587,7 +596,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -610,7 +619,7 @@
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                           </div>
                         </div>
                       </div>
@@ -638,8 +647,52 @@
       </button>
   </section>
 
-  <footer class="py-2">
-    <p class="text-center text-white">@ 2024 Garuda Transindo | Arafian Hafiz</p>
+  <footer class="m-0">
+    <div class="row p-0 pt-5">
+      <div class="col-4 bg-primary m-0">
+        <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
+          <div class="my-2">
+            <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
+              style="height: 50px;">
+          </div>
+          <div class="my-2">
+            <h6 class="fw-bold text-uppercase text-white text-start">Garuda Transindo</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-8" style="background-color: #003366;">
+        <div class="row">
+          <div class="col-6">
+            <div class="d-flex align-items-center justify-content-end " style="height: 80px;">
+              <ul class="nav nav-underline">
+                <li class="nav-item">
+                  <a class="nav-link text-white" aria-current="page" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class=" d-flex align-items-center justify-content-center" style="height: 80px;">
+              <button type="button" class="btn btn-outline-light rounded-5"><i
+                class="bi bi-linkedin"></i></button>
+            <button type="button" class="btn btn-outline-light rounded-5"><i
+                class="bi bi-facebook"></i></button>
+            <button type="button" class="btn btn-outline-light rounded-5"><i
+                class="bi bi-twitter"></i></button>
+            <button type="button" class="btn btn-outline-light rounded-5"><i
+                class="bi bi-twitter-x"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center border-top border-white p-2 text-white" style="background-color: #003366;">@ 2024 Garuda Transindo | Arafian Hafiz</p>
   </footer>
 
 
