@@ -70,22 +70,34 @@
       filter: grayscale(0%);
       transition: 0.5s ease;
       color: white !important;
+      text-shadow: 4px 4px #1c1c1c;
     }
-
-    .cardS:hover {
-      transform: scale(1.15);
-      transition: 0.5s ease;
+    .gone{
+      font-size: 200px; 
+      top: 220px; 
+      right: 50px;
+    }
+    .imgbg:hover .gone{
+      opacity: 0;
+      transition: 0.5s ease-in;
     }
 
     .cardST:hover {
       transform: scale(1.1);
       transition: 0.5s ease;
     }
-
-    .card-title,
-    .card-text {
-      color: black !important;
+    
+    .come{
+      opacity: 0;
     }
+    .imgbg:hover .come{
+      opacity: 1;
+      transition: 0.2s;
+      cursor: pointer;
+      color: #CC0000;
+      text-shadow: none;
+    }
+
 
     .star {
       width: 15px;
@@ -95,9 +107,50 @@
       filter: invert(89%) sepia(99%) saturate(2639%) hue-rotate(350deg) brightness(100%) contrast(106%);
     }
 
-    .rounded-5 {
-      height: 55px;
-      width: auto;
+    .scroll-down {
+      height: 50px;
+      width: 30px;
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    .scroll-down::before,
+    .scroll-down::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      height: 20px;
+      width: 20px;
+      transform: translate(-50%, -100%) rotate(45deg);
+      border: 2px solid rgb(255, 255, 255);
+      border-top: transparent;
+      border-left: transparent;
+      animation: scroll-down 1s ease-in-out infinite;
+    }
+    .scroll-down::before {
+      top: 30%;
+      animation-delay: 0.3s;
+      /* animation: scroll-down 1s ease-in-out infinite; */
+    }
+
+    @keyframes scroll-down {
+      0% {
+        /* top:20%; */
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      60% {
+        opacity: 1;
+      }
+      100% {
+        top: 90%;
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -155,70 +208,75 @@
         </div>
       </div>
     </div>
+    <a href="#intro">
+    <div class="scroll-down z-1 text-white"></div>
+    </a>
   </section>
 
   <section class="vh-100" id="intro">
-    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-      <div class="card rounded shadow p-3 mb-5 rounded">
-        <div class="card-body">
-          <div class="container p-3">
-            <div class="row">
-              <div class="col-6 d-flex align-items-center">
-                <div id="carouselImg" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
-                        class="w-100 rounded-4">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="asset/img/plane-that-has-word-sa-it.jpg" alt="" class="w-100 rounded-4">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 d-flex align-items-center">
-                <div>
-                  <p class="fs-3 fw-bold">Tentang Perusahaan :</p>
-                  <p>Garuda Transindo adalah perusahaan logistik terkemuka yang berkomitmen untuk menyediakan solusi
-                    transportasi yang efisien dan handal di seluruh Indonesia. Dengan armada truk modern dan tim
-                    profesional berpengalaman, kami siap mengantarkan barang Anda dengan aman dan tepat waktu. Kami
-                    bangga
-                    menjadi mitra terpercaya bagi berbagai industri dalam memenuhi kebutuhan pengiriman mereka.</p>
-                  <p class="fs-3 fw-bold">Misi Utama :</p>
-                  <p>Misi utama kami adalah memberikan layanan logistik yang unggul melalui inovasi, keandalan, dan
-                    dedikasi terhadap kepuasan pelanggan. Kami bertekad untuk terus meningkatkan standar layanan kami
-                    dengan mengadopsi teknologi terbaru dan praktik terbaik dalam industri, serta memastikan bahwa
-                    setiap
-                    pengiriman dilakukan dengan tingkat akurasi dan kecepatan yang tinggi.</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="grid">
-                  <div class="row">
-                    <div class="col-2">
-                      <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="img-fluid imgBnW"
-                        data-bs-target="#carouselImg" data-bs-slide-to="0" class="active" aria-current="true"
-                        aria-label="Slide 1">
-                    </div>
-                    <div class="col-2">
-                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
-                        class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1" aria-current="true"
-                        aria-label="Slide 2">
-                    </div>
-                    <div class="col-2">
-                      <img src="asset/img/plane-that-has-word-sa-it.jpg " alt="" class="img-fluid imgBnW"
-                        data-bs-target="#carouselImg" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+    <div class="container">
+      <div class="min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="card rounded shadow my-5 rounded">
+          <div class="card-body">
+            <div class="container p-3">
+              <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <div id="carouselImg" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
+                          class="w-100 rounded-4">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="asset/img/plane-that-has-word-sa-it.jpg" alt="" class="w-100 rounded-4">
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="col-6 d-flex align-items-center">
+                  <div>
+                    <p class="fs-3 fw-bold">Tentang Perusahaan :</p>
+                    <p>Garuda Transindo adalah perusahaan logistik terkemuka yang berkomitmen untuk menyediakan solusi
+                      transportasi yang efisien dan handal di seluruh Indonesia. Dengan armada truk modern dan tim
+                      profesional berpengalaman, kami siap mengantarkan barang Anda dengan aman dan tepat waktu. Kami
+                      bangga
+                      menjadi mitra terpercaya bagi berbagai industri dalam memenuhi kebutuhan pengiriman mereka.</p>
+                    <p class="fs-3 fw-bold">Misi Utama :</p>
+                    <p>Misi utama kami adalah memberikan layanan logistik yang unggul melalui inovasi, keandalan, dan
+                      dedikasi terhadap kepuasan pelanggan. Kami bertekad untuk terus meningkatkan standar layanan kami
+                      dengan mengadopsi teknologi terbaru dan praktik terbaik dalam industri, serta memastikan bahwa
+                      setiap
+                      pengiriman dilakukan dengan tingkat akurasi dan kecepatan yang tinggi.</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-6">
-                <a class="btn btn-outline-danger">Cari tahu lebih lanjut mengenai pelayanan kami</a>
+              <div class="row">
+                <div class="col-6">
+                  <div class="grid">
+                    <div class="row">
+                      <div class="col-2">
+                        <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="img-fluid imgBnW"
+                          data-bs-target="#carouselImg" data-bs-slide-to="0" class="active" aria-current="true"
+                          aria-label="Slide 1">
+                      </div>
+                      <div class="col-2">
+                        <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
+                          class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1" aria-current="true"
+                          aria-label="Slide 2">
+                      </div>
+                      <div class="col-2">
+                        <img src="asset/img/plane-that-has-word-sa-it.jpg " alt="" class="img-fluid imgBnW"
+                          data-bs-target="#carouselImg" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <a class="btn btn-outline-danger">Cari tahu lebih lanjut mengenai pelayanan kami</a>
+                </div>
               </div>
             </div>
           </div>
@@ -229,14 +287,12 @@
 
   <section class="vh-100 p-0" id="service">
     <div class="row" style="max-width: 220vh;">
-
       <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
         style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
-        <div class="card my-5 cardS" style="width: 18rem;">
-          <div class="card-body text-center">
-            <img src="asset/img/cargo-truck_936784.png" class="py-5" alt="img-logo" style="width: 80px;">
-            <h5 class="card-title">General Freight</h5>
-            <p class="card-text">Layanan pengiriman barang umum dengan jaminan keandalan dan keamanan.</p>
+        <h1 class="position-absolute z-0 text-white gone font-monospace">01</h1>
+        <div class="my-5 cardS z-1">
+          <div class="text-center">
+            <h2 class="card-title fw-bold">General Freight</h2>
           </div>
         </div>
       </div>
@@ -245,23 +301,21 @@
         <div class="position-absolute text-center z-1">
           <h1 class="fw-bold mt-5 text-uppercase textTesty">Layanan Kami</h1>
         </div>
+        <h1 class="position-absolute z-0 text-white gone font-monospace">02</h1>
         <div class="d-flex align-items-center">
-          <div class="card my-5 cardS" style="width: 18rem;">
-            <div class="card-body text-center">
-              <img src="asset/img/delivery_9815331.png" class="py-5" alt="img-logo" style="width: 100px;">
-              <h5 class="card-title">Express Delivery</h5>
-              <p class="card-text">Pengiriman cepat dengan waktu yang tepat dan pelayanan terbaik.</p>
+          <div class="my-5 cardS z-1">
+            <div class="text-center">
+              <h2 class="card-title fw-bold">Express Delivery</h2>
             </div>
           </div>
         </div>
       </div>
       <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
         style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
-        <div class="card my-5 cardS" style="width: 18rem;">
-          <div class="card-body text-center">
-            <img src="asset/img/logistics_8478350.png" class="py-5" alt="img-logo" style="width: 80px;">
-            <h5 class="card-title">International Shipping</h5>
-            <p class="card-text">Layanan pengiriman internasional yang menjangkau seluruh dunia.</p>
+        <h1 class="position-absolute z-0 text-white gone font-monospace">03</h1>
+        <div class=" my-5 cardS z-1">
+          <div class=" text-center">
+            <h2 class="card-title fw-bold">International Shipping <i class="bi bi-arrow-right-circle come"></i></h2>
           </div>
         </div>
       </div>
@@ -282,11 +336,11 @@
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-1.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-1.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
-                          <h5 class="card-title">Hiroshi Tanaka</h5>
-                          <div class="row m-0">
+                        <div class="col-9 p-0">
+                          <h6 class="card-title">Hiroshi Tanaka</h6>
+                          <div class="row m-0 py-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -305,9 +359,9 @@
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-2.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-2.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Aziz Rahman</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -328,9 +382,9 @@
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-3.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-3.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Nguyen Van Tuan</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -351,9 +405,9 @@
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-4.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-4.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Mei Lin</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -376,13 +430,13 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-5.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-5.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h4 class="card-title">Li Wei</h4>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -399,13 +453,13 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-6.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-6.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Yuki Nakamura</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -422,13 +476,13 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-7.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-7.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Rajesh Kumar</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -445,13 +499,13 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-8.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-8.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Ananda Wijaya</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -474,13 +528,13 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-9.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-9.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Ananya Patel</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -497,13 +551,13 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-10.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-10.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Somchai Prasert</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -520,13 +574,13 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-11.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-11.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Kim Min-jun</h5>
                           <div class="row m-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
@@ -543,13 +597,13 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
+                  <div class="card cardST">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-3">
-                          <img src="asset/img/testy/P-12.jpg" alt="" class="rounded-5 border">
+                          <img src="asset/img/testy/P-12.jpg" alt="" class="rounded-5 border img-fluid">
                         </div>
-                        <div class="col-auto p-0">
+                        <div class="col-9 p-0">
                           <h5 class="card-title">Aung Kyaw</h5>
                           <div class="row mx-0">
                             <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
