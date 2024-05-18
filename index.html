@@ -15,7 +15,7 @@
     body {
       margin: 0;
       padding: 0;
-      overflow-x:hidden;
+      overflow-x: hidden;
     }
 
     .bg-primary {
@@ -66,21 +66,38 @@
 
     .cardS:hover,
     .imgbg:hover,
-    .imgbg:hover .textTesty  {
+    .imgbg:hover .textTesty {
       filter: grayscale(0%);
+      transition: 0.5s ease;
       color: white !important;
     }
-    .cardS:hover{
+
+    .cardS:hover {
       transform: scale(1.15);
+      transition: 0.5s ease;
     }
-    .card-title,.card-text{
+
+    .cardST:hover {
+      transform: scale(1.1);
+      transition: 0.5s ease;
+    }
+
+    .card-title,
+    .card-text {
       color: black !important;
     }
-    .star{
-      width: 20px;
+
+    .star {
+      width: 15px;
     }
-    .kuning{
+
+    .kuning {
       filter: invert(89%) sepia(99%) saturate(2639%) hue-rotate(350deg) brightness(100%) contrast(106%);
+    }
+
+    .rounded-5 {
+      height: 55px;
+      width: auto;
     }
   </style>
 </head>
@@ -212,7 +229,7 @@
 
   <section class="vh-100 p-0" id="service">
     <div class="row" style="max-width: 220vh;">
-      
+
       <div class="col-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
         style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
         <div class="card my-5 cardS" style="width: 18rem;">
@@ -226,7 +243,7 @@
       <div class="col-4 img-fluid imgbg min-vh-100 d-flex justify-content-center z-0"
         style="background-image: url(asset/img/man-working-as-truck-driver-posing2.jpg);">
         <div class="position-absolute text-center z-1">
-          <h1 class="fw-bold mt-5 text-uppercase textTesty">Testimony</h1>
+          <h1 class="fw-bold mt-5 text-uppercase textTesty">Layanan Kami</h1>
         </div>
         <div class="d-flex align-items-center">
           <div class="card my-5 cardS" style="width: 18rem;">
@@ -251,144 +268,104 @@
     </div>
   </section>
 
-  <section class="vh-100 mt-5">
+  <section class="my-5">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="min-vh-100 d-flex align-items-center">
+        <div class="d-flex align-items-center"></div>
+        <h1 class="text-center my-5 text-uppercase fw-bold">Testimony Pelanggan</h1>
+        <div class="">
           <div class="carousel-item active">
             <div class="container">
               <div class="row">
                 <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-1.jpg" alt="" class="img-fluid">
+                  <div class="card cardST">
                     <div class="card-body">
-                      <h4 class="card-title">Hiroshi Tanaka</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-1.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Hiroshi Tanaka</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Garuda Transindo memiliki layanan pengiriman yang sangat andal dan profesional. Mereka selalu tepat waktu dan menjaga barang dengan baik."</p>
+                      <p class="card-text my-2">"Garuda Transindo memiliki layanan pengiriman yang sangat andal dan
+                        profesional. Mereka selalu tepat waktu dan menjaga barang dengan baik."</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-2.jpg" alt="" class="img-fluid">
+                  <div class="card cardST">
                     <div class="card-body">
-                      <h4 class="card-title">Aziz Rahman</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-2.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Aziz Rahman</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Layanan Garuda Transindo sangat memuaskan. Mereka selalu menjaga integritas dan keandalan dalam setiap pengiriman."</p>
+                      <p class="card-text my-2">"Layanan Garuda Transindo sangat memuaskan. Mereka selalu menjaga
+                        integritas dan keandalan dalam setiap pengiriman."</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-3.jpg" alt="" class="img-fluid">
+                  <div class="card cardST">
                     <div class="card-body">
-                      <h4 class="card-title">Nguyen Van Tuan</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-3.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Nguyen Van Tuan</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Garuda Transindo memberikan layanan yang luar biasa. Pengiriman selalu tiba tepat waktu dan dalam kondisi sempurna."</p>
+                      <p class="card-text my-2">"Garuda Transindo memberikan layanan yang luar biasa. Pengiriman selalu
+                        tiba tepat waktu dan dalam kondisi sempurna."</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-4.jpg" alt="" class="img-fluid">
+                  <div class="card cardST">
                     <div class="card-body">
-                      <h4 class="card-title">Mei Lin</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-4.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Mei Lin</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Pengalaman saya dengan Garuda Transindo selalu positif. Mereka selalu memastikan pengiriman cepat dan aman."</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-5.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                      <h4 class="card-title">Li Wei</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
-                      </div>
-                      <p class="card-text">"Pelayanan dari Garuda Transindo sangat memuaskan. Pengiriman selalu cepat dan aman."</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-6.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                      <h4 class="card-title">Yuki Nakamura</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
-                      </div>
-                      <p class="card-text">"Garuda Transindo selalu memberikan pelayanan terbaik. Mereka sangat profesional dan dapat diandalkan."</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-7.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                      <h4 class="card-title">Rajesh Kumar</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
-                      </div>
-                      <p class="card-text">"Garuda Transindo adalah perusahaan trucking yang sangat efisien. Mereka selalu memastikan pengiriman dilakukan dengan baik."</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card">
-                    <img src="asset/img/testy/P-8.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                      <h4 class="card-title">Ananda Wijaya</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
-                      </div>
-                      <p class="card-text">"Garuda Transindo adalah pilihan terbaik untuk kebutuhan logistik kami. Layanan mereka sangat profesional."</p>
+                      <p class="card-text my-2">"Pengalaman saya dengan Garuda Transindo selalu positif. Mereka selalu
+                        memastikan pengiriman cepat dan aman."</p>
                     </div>
                   </div>
                 </div>
@@ -400,65 +377,191 @@
               <div class="row">
                 <div class="col-md-3">
                   <div class="card">
-                    <img src="asset/img/testy/P-9.jpg" alt="" class="img-fluid">
                     <div class="card-body">
-                      <h4 class="card-title">Ananya Patel</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-5.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h4 class="card-title">Li Wei</h4>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Saya sangat menghargai layanan dari Garuda Transindo. Mereka selalu memberikan solusi logistik yang efisien dan tepat waktu."</p>
+                      <p class="card-text my-2">"Pelayanan dari Garuda Transindo sangat memuaskan. Pengiriman selalu
+                        cepat dan aman."</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="card">
-                    <img src="asset/img/testy/P-10.jpg" alt="" class="img-fluid">
                     <div class="card-body">
-                      <h4 class="card-title">Somchai Prasert</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-6.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Yuki Nakamura</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Saya sangat merekomendasikan Garuda Transindo. Mereka selalu memberikan layanan terbaik dan menjaga kepuasan pelanggan."</p>
+                      <p class="card-text my-2">"Garuda Transindo selalu memberikan pelayanan terbaik. Mereka sangat
+                        profesional dan dapat diandalkan."</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="card">
-                    <img src="asset/img/testy/P-11.jpg" alt="" class="img-fluid">
                     <div class="card-body">
-                      <h4 class="card-title">Kim Min-jun</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-7.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Rajesh Kumar</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Saya sangat terkesan dengan kehandalan Garuda Transindo. Mereka selalu menjaga kualitas layanan mereka."</p>
+                      <p class="card-text my-2">"Garuda Transindo adalah perusahaan trucking yang sangat efisien. Mereka
+                        selalu memastikan pengiriman dilakukan dengan baik."</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="card">
-                    <img src="asset/img/testy/P-12.jpg" alt="" class="img-fluid">
                     <div class="card-body">
-                      <h4 class="card-title">Aung Kyaw</h4>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-8.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Ananda Wijaya</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
                       </div>
-                      <p class="card-text">"Garuda Transindo adalah perusahaan trucking yang sangat terpercaya. Mereka selalu memastikan pengiriman barang aman dan tepat waktu."</p>
+                      <p class="card-text my-2">"Garuda Transindo adalah pilihan terbaik untuk kebutuhan logistik kami.
+                        Layanan mereka sangat profesional."</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-9.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Ananya Patel</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">"Saya sangat menghargai layanan dari Garuda Transindo. Mereka selalu
+                        memberikan solusi logistik yang efisien dan tepat waktu."</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-10.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Somchai Prasert</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">"Saya sangat merekomendasikan Garuda Transindo. Mereka selalu memberikan
+                        layanan terbaik dan menjaga kepuasan pelanggan."</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-11.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Kim Min-jun</h5>
+                          <div class="row m-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">"Saya sangat terkesan dengan kehandalan Garuda Transindo. Mereka selalu
+                        menjaga kualitas layanan mereka."</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-3">
+                          <img src="asset/img/testy/P-12.jpg" alt="" class="rounded-5 border">
+                        </div>
+                        <div class="col-auto p-0">
+                          <h5 class="card-title">Aung Kyaw</h5>
+                          <div class="row mx-0">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
+                            <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                          </div>
+                        </div>
+                      </div>
+                      <p class="card-text my-2">"Garuda Transindo adalah perusahaan trucking yang sangat terpercaya.
+                        Mereka selalu memastikan pengiriman barang aman dan tepat waktu."</p>
                     </div>
                   </div>
                 </div>
@@ -467,153 +570,18 @@
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev bg-dark" style="height: 100px !important; top: 300px; width: 100px;" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev">
+      <button class="carousel-control-prev bg-dark bg-opacity-50"
+        style="height: 100px !important; top: 200px; width: 100px;" type="button"
+        data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next bg-dark" style="height: 100px !important; top: 300px; width: 100px;" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next">
+      <button class="carousel-control-next bg-dark bg-opacity-50"
+        style="height: 100px !important; top: 200px; width: 100px;" type="button"
+        data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-      <!-- <div class="container">
-      <div class="row py-5">
-        <h1 class="d-flex align-middle">Testimoni</h1>
-      </div>
-          <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="card">
-                      <img src="asset/img/pexels-simon-robben-55958-977796.jpg" alt="" class="img-fluid">
-                      <div class="card-body">
-                        <h4 class="card-title">BAPAK</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 d-flex justify-content-end">
-      <a class="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"><i
-          class="bi bi-arrow-left-square img-fluid" style="font-size: 20px;"></i></a>
-      <a class="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"><i
-          class="bi bi-arrow-right-square" style="font-size: 20px;"></i></a>
-    </div> -->
   </section>
 
   <footer class="py-2">
