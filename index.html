@@ -14,6 +14,10 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
   <style>
@@ -26,11 +30,6 @@
       overflow-x: hidden;
     }
 
-    .nav-link:hover {
-      border-bottom: 0.375rem solid;
-      transition: 0.3s ease;
-    }
-
     .bg-primary2 {
       background: transparent !important;
       transition: 0.5s ease;
@@ -38,14 +37,6 @@
 
     .bg-primary2.scrolled {
       background: #003366 !important;
-    }
-
-    .text-underline-hover {
-      text-decoration: none;
-    }
-
-    .text-underline-hover:hover {
-      text-decoration: underline;
     }
 
     .background-video {
@@ -108,6 +99,13 @@
       transition: 0.5s ease-in;
     }
 
+    .cardST {
+      min-height: 220px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
     .star {
       width: 15px;
     }
@@ -163,6 +161,20 @@
         top: 90%;
         opacity: 0;
       }
+    }
+    .bg-biru{
+      background-color: #003366;
+    }
+    .btn-light{
+      border: none;
+    }
+    .btn-light:hover{
+      background-color: black;
+      color: white;
+      border: none;
+    }
+    .outlineText{
+      font-family: "Londrina Outline", sans-serif;
     }
   </style>
 </head>
@@ -296,7 +308,7 @@
       <div
         class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-2 order-lg-1"
         style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
-        <h1 class="position-absolute z-0 text-white gone font-monospace">01</h1>
+        <h1 class="position-absolute z-0 text-white gone outlineText">01</h1>
         <div class="my-5 cardS z-1">
           <div class="text-center">
             <a href="service.html" class="text-s">
@@ -310,7 +322,7 @@
         <div class="position-absolute text-center z-1">
           <h1 class="fw-bold mt-5 text-uppercase textTesty">Layanan Kami</h1>
         </div>
-        <h1 class="position-absolute z-0 text-white gone font-monospace">02</h1>
+        <h1 class="position-absolute z-0 text-white gone outlineText">02</h1>
         <div class="d-flex align-items-center">
           <div class="my-5 cardS z-1">
             <div class="text-center">
@@ -324,7 +336,7 @@
       <div
         class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-3 order-lg-3"
         style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
-        <h1 class="position-absolute z-0 text-white gone font-monospace">03</h1>
+        <h1 class="position-absolute z-0 text-white gone outlineText">03</h1>
         <div class=" my-5 cardS z-1">
           <div class=" text-center">
             <a href="service.html" class="text-s">
@@ -336,14 +348,14 @@
     </div>
   </section>
 
-  <section class="py-5">
+  <section class="py-5" id="testy">
     <div class="container">
       <h1 class="fs-1 fw-bold text-center my-5 text-uppercase">Testimony Pelanggan</h1>
       <div class="card border-0">
         <div class="Swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -366,7 +378,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -389,7 +401,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -412,7 +424,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -435,7 +447,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -458,7 +470,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -481,7 +493,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -504,7 +516,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -527,7 +539,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -550,7 +562,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -573,7 +585,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -596,7 +608,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card" style="height: 220px;">
+              <div class="card cardST">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-3">
@@ -630,46 +642,86 @@
     </div>
   </section>
 
-  <section class="p-0 ">
-    <div class="row p-0 pt-5">
-      <div class="col-md-4 bg-primary m-0 d-flex align-items-center justify-content-center">
-        <div class="my-2 text-center">
-          <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
-            style="height: 50px;">
-          <h6 class="fw-bold text-uppercase text-white mt-2">Garuda Transindo</h6>
-        </div>
+  <section class="min-vh-100" id="galery">
+    <h1 class="fs-1 fw-bold text-center text-uppercase my-5">Gallery</h1>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+        <img src="asset/img/man-working-as-truck-driver2.jpg" class="w-100 shadow-1-strong rounded mb-4"
+          alt="Wintry Mountain Landscape" />
       </div>
-      <div class="col-md-8" style="background-color: #003366;">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="d-flex align-items-center justify-content-end" style="height: 80px;">
-              <ul class="nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link text-white" aria-current="page" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Service</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Contact</a>
-                </li>
-              </ul>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="asset/img/man-working-as-truck-driver-posing2.jpg" class="w-100 shadow-1-strong rounded mb-4"
+          alt="Mountains in the Clouds" />
+
+        <img src="asset/img/trucks-8656643_1920.jpg" class="w-100 shadow-1-strong rounded mb-4"
+          alt="Boat on Calm Water" />
+      </div>
+
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <img src="asset/img/plane-that-has-word-sa-it.jpg" class="w-100 shadow-1-strong rounded mb-4"
+          alt="Waves at Sea" />
+
+        <img src="asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg"
+          class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+      </div>
+    </div>
+    <!-- Gallery -->
+  </section>
+
+  <section class="p-0 position-relative">
+    <div class="d-flex justify-content-center">
+      <div class="card position-absolute bg-primary" style="width: 1200px;">
+        <div class="card-body text-white">
+          <div class="row">
+            <div class="col-8 ml-1">
+              <h2 class="fw-bold">Ada pertanyaan? Kami di Sini untuk Membantu Anda!</h2>
+              <p class="text-break">Garuda Transindo adalah salah satu penyedia angkutan truk angkut berat dan muatan besar terkemuka di Indonesia.</p>
+            </div>
+            <div class="col-2 d-flex align-items-center">
+              <h1 class="text-white position-absolute outlineText" style="font-size: 150px;">24/7</h1>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-end">
+              <a class="btn btn-light">Lern more</a>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="d-flex align-items-center justify-content-center gap-2" style="height: 80px;">
-              <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></button>
-              <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></button>
-              <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter"></i></button>
-              <button type="button" class="btn btn-outline-light rounded-circle"><i
-                  class="bi bi-instagram"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-biru p-0 mt-5">
+      <div class="row" style="padding-top: 130px;">
+        <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
+          <div class="my-2 text-center">
+            <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
+              style="height: 50px;">
+            <h6 class="fw-bold text-uppercase text-white mt-2">Garuda Transindo</h6>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="row">
+            <div class="col-lg-4">
+              <p>Contact</p>
+            </div>
+            <div class="col-lg-4">
+              <p>About</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="d-flex align-items-center justify-content-center gap-2" style="height: 80px;">
+                <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></button>
+                <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></button>
+                <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter"></i></button>
+                <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <footer class="py-3" style="background-color: #003366;">
+  <footer class="py-3 border-top border-white bg-biru">
     <p class="text-center text-white m-0">@ 2024 Garuda Transindo | Arafian Hafiz</p>
   </footer>
 
@@ -681,7 +733,6 @@
   </script>
   <script type="module">
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-
     const swiper = new Swiper(".Swiper", {
       slidesPerView: 1,
       spaceBetween: 30,
@@ -702,7 +753,15 @@
       breakpoints: {
         640: {
           slidesPerView: 3,
-          spaceBetween: 20,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
         },
       },
     });
