@@ -17,9 +17,11 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+    }
+    body{
       overflow-x: hidden;
     }
 
@@ -288,7 +290,7 @@
 
   <section class="min-vh-100 p-0" id="service">
     <div class="row" style="max-width: 220vh;">
-      <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
+      <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-2 order-lg-1"
         style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
         <h1 class="position-absolute z-0 text-white gone font-monospace">01</h1>
         <div class="my-5 cardS z-1">
@@ -299,7 +301,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex justify-content-center z-0"
+      <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex justify-content-center z-0 order-1 order-lg-2"
         style="background-image: url(asset/img/man-working-as-truck-driver-posing2.jpg);">
         <div class="position-absolute text-center z-1">
           <h1 class="fw-bold mt-5 text-uppercase textTesty">Layanan Kami</h1>
@@ -315,7 +317,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
+      <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-3 order-lg-3"
         style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
         <h1 class="position-absolute z-0 text-white gone font-monospace">03</h1>
         <div class=" my-5 cardS z-1">
@@ -331,7 +333,7 @@
 
   <section class="py-5">
     <div class="container">
-
+      <h1 class="fs-1 fw-bold text-center my-5 text-uppercase">Testimony Pelanggan</h1>
       <div class="card border-0">
         <div class="Swiper">
           <div class="swiper-wrapper">
@@ -623,7 +625,7 @@
     </div>
   </section>
 
-  <section class="p-0 bg-light">
+  <section class="p-0 ">
     <div class="row p-0 pt-5">
       <div class="col-md-4 bg-primary m-0 d-flex align-items-center justify-content-center">
         <div class="my-2 text-center">
@@ -680,6 +682,10 @@
       spaceBetween: 30,
       grabCursor: true,
       loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -689,10 +695,9 @@
         clickable: true,
       },
       breakpoints: {
-        // ketika lebar layar <= 640px
         640: {
           slidesPerView: 3,
-          spaceBetween: 10,
+          spaceBetween: 20,
         },
       },
     });
