@@ -9,29 +9,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="asset/css/style.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        .nav-link:hover {
-            border-bottom: 375 rem;
-            transition: 0.3s ease;
-        }
-
-        .bg-primary2 {
-            background: transparent !important;
-            transition: 0.5s ease;
-        }
-
-        .bg-primary2.scrolled {
-            background: #003366 !important;
-        }
-
         #hero {
             height: 500px;
             background-image: url(asset/img/bg2.jpg);
@@ -43,35 +32,153 @@
             text-decoration: double black;
             text-shadow: 10px 2px 5px black;
         }
+
+        /* The actual timeline (the vertical ruler) */
+        .main-timeline {
+            position: relative;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .main-timeline::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            background-color: #939597;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .timeline {
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .timeline::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: #939597;
+            border: 5px solid #f5df4d;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+            padding: 0px 40px 20px 0px;
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            padding: 0px 0px 20px 40px;
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            position: absolute;
+            top: 18px;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            position: absolute;
+            top: 18px;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -12px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+
+            /* Place the timelime to the left */
+            .main-timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .timeline {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .timeline::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after,
+            .right::after {
+                left: 18px;
+            }
+
+            .left::before {
+                right: auto;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary2" data-bs-theme="dark">
-        <div class="container-fluid gap-4 mx-4">
-            <div>
+    <nav class="navbar navbar-dark bg-dark bg-opacity-25 navbar-expand-lg z-2 fixed-top">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
                 <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
                     style="height: 50px;">
-                <a class="navbar-brand" href="#">Garuda Transindo</a>
+                <a class="navbar-brand ms-2 text-white" href="#">Garuda Transindo</a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 nav-underline">
                     <li class="nav-item">
-                        <a class="nav-link px-3 text-white" aria-current="page" href="#">
-                            Home</a>
+                        <a class="nav-link px-3 text-white border-3" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active px-3 text-white border-3" href="#">About</a>
+                        <a class="nav-link active px-3 text-white" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3 text-white  " href="#">Service</a>
+                        <a class="nav-link px-3 text-white" href="#">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3 text-white " href="#">Contact</a>
+                        <a class="nav-link px-3 text-white" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -85,21 +192,191 @@
     </section>
 
     <section id="Histori">
+        <section style="background-color: #F0F2F5;">
+            <div class="container py-5">
+                <h1 class="text-center text-uppercase mb-5">Timeline</h1>
+                <div class="main-timeline">
+                    <div class="timeline left">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2019</h3>
+                                <p class="mb-0"><strong>Pendirian dan Awal Operasi:</strong> Garuda Transindo didirikan
+                                    pada tahun 2019 dengan visi menjadi penyedia layanan logistik terkemuka di
+                                    Indonesia. Tahun ini, perusahaan mulai membangun jaringan dan infrastruktur untuk
+                                    operasi pengiriman yang efisien.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline right">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2020</h3>
+                                <p class="mb-0"><Strong>Ekspansi Layanan:</Strong> Pada tahun 2020, Garuda Transindo
+                                    memperluas layanannya dengan menambahkan rute-rute baru dan memperkenalkan layanan
+                                    pengiriman kilat. Perusahaan juga mulai menggunakan teknologi canggih untuk
+                                    meningkatkan pelacakan dan manajemen pengiriman.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline left">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2021</h3>
+                                <p class="mb-0">Kemitraan Strategis: Garuda Transindo menjalin kemitraan strategis
+                                    dengan beberapa perusahaan besar untuk memperluas jangkauan dan kapabilitas
+                                    layanannya. Selain itu, perusahaan meningkatkan fokus pada keberlanjutan dengan
+                                    memperkenalkan armada ramah lingkungan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline right">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2022</h3>
+                                <p class="mb-0">Digitalisasi dan Inovasi: Tahun 2022 menandai pergeseran signifikan ke
+                                    arah digitalisasi dengan peluncuran aplikasi seluler untuk memudahkan pelanggan
+                                    dalam mengatur pengiriman. Garuda Transindo juga memperkenalkan sistem manajemen
+                                    logistik berbasis cloud untuk efisiensi yang lebih baik.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline left">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>2023</h3>
+                                <p class="mb-0">Pengakuan dan Penghargaan: Pada tahun 2023, Garuda Transindo menerima
+                                    beberapa penghargaan industri atas inovasi dan layanan pelanggan yang luar biasa.
+                                    Perusahaan terus memperluas jangkauannya ke pasar internasional dengan membuka
+                                    kantor cabang di beberapa negara ASEAN.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline right">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3>Sekarang</h3>
+                                <p class="mb-0">Pertumbuhan Berkelanjutan: Garuda Transindo fokus pada pertumbuhan
+                                    berkelanjutan dengan menambah investasi di teknologi hijau dan meningkatkan layanan
+                                    pengiriman berbasis digital. Perusahaan juga memperkuat kehadirannya di pasar
+                                    domestik dan internasional dengan meningkatkan kolaborasi dengan mitra global.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
 
-    <section id="visimisi">
-
+    <section class="min-vh-100">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Visi dan Misi Kami</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card" style="width: 500px;">
+                            <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100" >
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5>VISI</h5>
+                            <p>Menjadi penyedia layanan logistik terkemuka yang diakui karena
+                                keunggulan dalam kecepatan, keamanan, dan kehandalan pengiriman di seluruh Indonesia dan
+                                internasional.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5>MISI</h5>
+                            <p>Memberikan layanan logistik yang unggul melalui inovasi, keandalan,
+                                dan dedikasi terhadap kepuasan pelanggan. Kami bertekad untuk terus meningkatkan standar layanan
+                                kami dengan mengadopsi teknologi terbaru dan praktik terbaik dalam industri.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card w-100" style="width: 500px;">
+                                <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt="" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="team">
+
+    <section>
+        
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+    <section class="mt-5">
+        <div class="bg-biru p-0 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center">
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-center">
+                                <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt=""
+                                    class="img-fluid" style="height: 50px;">
+                                <h6 class="fw-bold text-uppercase text-white mt-3">Garuda Transindo</h6>
+                            </div>
+                            <p class="text-white mt-2">Garuda Transindo adalah perusahaan logistik terkemuka yang
+                                menyediakan solusi pengiriman andal dan efisien untuk bisnis Anda.</p>
+                            <div class="text-center gap-2" style="height: 80px;">
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-linkedin"></i></button>
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-facebook"></i></button>
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-twitter"></i></button>
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-instagram"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mb-2">
+                        <h5 class="text-white m-3 fw-bold text-lg-start text-center">Contact</h5>
+                        <ul class="list-unstyled m-1">
+                            <li class="text-white mb-2">
+                                <i class="bi bi-geo-alt-fill mx-2"></i> 1234 Street Name, City, Country
+                            </li>
+                            <li class="text-white">
+                                <i class="bi bi-telephone-fill mx-2"></i> + 01 234 567 88
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-2 mb-2">
+                        <h5 class="text-white m-3 fw-bold text-lg-start text-center">About</h5>
+                        <ul class="nav nav-underline flex-column">
+                            <li class="nav-item p-0">
+                                <a class="nav-link text-white p-0" aria-current="page" href="#">About</a>
+                            </li>
+                            <li class="nav-item p-0">
+                                <a class="nav-link text-white p-0" href="#">Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white p-0" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-3 mb-2">
+                        <h5 class="text-white m-3 fw-bold text-lg-start text-center">Subscribe</h5>
+                        <p class="text-white m-0">Subscribe kami!</p>
+                        <p class="text-white m-0"> Ikuti berita terbaru!</p>
+                        <div class="input-group my-3">
+                            <input type="text" class="form-control" placeholder="Your Email"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                    class="bi bi-envelope-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-3 border-top border-white bg-biru">
+        <p class="text-center text-white m-0">@ 2024 Garuda Transindo | Arafian Hafiz</p>
+    </footer>
+
+    <script src="asset/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
