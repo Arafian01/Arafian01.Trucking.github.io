@@ -2,794 +2,861 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Garuda Transindo | Arafian Hafiz</title>
-  <link rel="icon" href="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Garuda Transindo | Arafian Hafiz</title>
+    <link rel="icon" href="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .bg-dark {
+            transition: 0.5s ease;
+        }
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        .bg-dark.scrolled {
+            background: #003366 !important;
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+        .background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+        }
 
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
+        .gradient-custom {
+            background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0)) !important;
+        }
 
-    body {
-      overflow-x: hidden;
-    }
+        .imgBnW {
+            filter: grayscale(100%);
+        }
 
-    .bg-primary2 {
-      background: transparent !important;
-      transition: 0.5s ease;
-    }
+        .imgBnW:hover {
+            filter: grayscale(0%);
+        }
 
-    .bg-primary2.scrolled {
-      background: #003366 !important;
-    }
+        .imgbg {
+            background-position: center;
+            background-size: cover;
+        }
 
-    .background-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* Ensures the video covers the container */
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      /* Places video behind other content */
-    }
+        .imgbg {
+            filter: grayscale(100%);
+        }
 
-    .gradient-custom {
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
-    }
+        .imgbg:hover,
+        .imgbg:hover .text-s {
+            filter: grayscale(0%);
+            transition: 0.5s ease;
+            color: white !important;
+            text-shadow: 4px 4px #1c1c1c;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-    .imgBnW {
-      filter: grayscale(100%);
-    }
+        .text-s {
+            text-decoration: none;
+            color: black;
+        }
 
-    .imgBnW:hover {
-      filter: grayscale(0%);
-    }
+        .gone {
+            font-size: 200px;
+            top: 220px;
+            right: 50px;
+        }
 
-    .imgbg {
-      background-position: center;
-      background-size: cover;
-    }
+        .imgbg:hover .gone {
+            opacity: 0;
+            transition: 0.5s ease-in;
+        }
 
-    .imgbg {
-      filter: grayscale(100%);
-    }
+        .outlineText {
+            font-family: "Londrina Outline", sans-serif;
+        }
 
-    .imgbg:hover,
-    .imgbg:hover .text-s {
-      filter: grayscale(0%);
-      transition: 0.5s ease;
-      color: white !important;
-      text-shadow: 4px 4px #1c1c1c;
-      cursor: pointer;
-      text-decoration: none;
-    }
+        .cardST {
+            min-height: 220px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
 
-    .text-s {
-      text-decoration: none;
-      color: black;
-    }
+        .star {
+            width: 15px;
+        }
 
-    .gone {
-      font-size: 200px;
-      top: 220px;
-      right: 50px;
-    }
+        .kuning {
+            filter: invert(89%) sepia(99%) saturate(2639%) hue-rotate(350deg) brightness(100%) contrast(106%);
+        }
 
-    .imgbg:hover .gone {
-      opacity: 0;
-      transition: 0.5s ease-in;
-    }
+        .scroll-down {
+            height: 50px;
+            width: 30px;
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
 
-    .cardST {
-      min-height: 220px;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+        .scroll-down::before,
+        .scroll-down::after {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            height: 20px;
+            width: 20px;
+            transform: translate(-50%, -100%) rotate(45deg);
+            border: 2px solid rgb(255, 255, 255);
+            border-top: transparent;
+            border-left: transparent;
+            animation: scroll-down 1s ease-in-out infinite;
+        }
 
-    .star {
-      width: 15px;
-    }
+        .scroll-down::before {
+            top: 30%;
+            animation-delay: 0.3s;
+        }
 
-    .kuning {
-      filter: invert(89%) sepia(99%) saturate(2639%) hue-rotate(350deg) brightness(100%) contrast(106%);
-    }
+        @keyframes scroll-down {
+            0% {
+                opacity: 0;
+            }
 
-    .scroll-down {
-      height: 50px;
-      width: 30px;
-      position: absolute;
-      left: 50%;
-      bottom: 20px;
-      border-radius: 50px;
-      cursor: pointer;
-    }
+            30% {
+                opacity: 1;
+            }
 
-    .scroll-down::before,
-    .scroll-down::after {
-      content: "";
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      height: 20px;
-      width: 20px;
-      transform: translate(-50%, -100%) rotate(45deg);
-      border: 2px solid rgb(255, 255, 255);
-      border-top: transparent;
-      border-left: transparent;
-      animation: scroll-down 1s ease-in-out infinite;
-    }
+            60% {
+                opacity: 1;
+            }
 
-    .scroll-down::before {
-      top: 30%;
-      animation-delay: 0.3s;
-    }
+            100% {
+                top: 90%;
+                opacity: 0;
+            }
+        }
 
-    @keyframes scroll-down {
-      0% {
-        opacity: 0;
-      }
-
-      30% {
-        opacity: 1;
-      }
-
-      60% {
-        opacity: 1;
-      }
-
-      100% {
-        top: 90%;
-        opacity: 0;
-      }
-    }
-    .bg-biru{
-      background-color: #003366;
-    }
-    .btn-light{
-      border: none;
-    }
-    .btn-light:hover{
-      background-color: black;
-      color: white;
-      border: none;
-    }
-    .outlineText{
-      font-family: "Londrina Outline", sans-serif;
-    }
-  </style>
+        .bg-biru {
+            background-color: #003366;
+        }
+    </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top bg-primary2 navbar-dark">
-    <div class="container-fluid">
-      <div class="d-flex align-items-center">
-        <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
-          style="height: 50px;">
-        <a class="navbar-brand ms-2 text-white" href="#">Garuda Transindo</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 nav-underline">
-          <li class="nav-item">
-            <a class="nav-link active px-3 text-white border-3" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 text-white" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 text-white" href="#">Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3 text-white" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <section class="min-vh-100" id="hero">
-    <video autoplay muted loop class="background-video">
-      <source src="asset/video/video.mp4" type="video/mp4">
-    </video>
-    <div class="position-absolute start-0 top-0 bg-dark gradient-custom z-1 w-100 bg-opacity-50 pb-3">
-      <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-lg-8">
-            <div class="text-white text-center">
-              <h1 class="fw-bold text-uppercase" style="font-size: 50px;">Garuda Transindo</h1>
-              <p class="fs-5">Melayani Pengiriman dengan Kecepatan dan Keandalan</p>
-              <button type="button" class="btn btn-danger px-5 text-white">Hubungi Kami</button>
+    <nav class="navbar navbar-dark bg-dark bg-opacity-25 navbar-expand-lg z-2 fixed-top">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
+                    style="height: 50px;">
+                <a class="navbar-brand ms-2 text-white" href="#">Garuda Transindo</a>
             </div>
-          </div>
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="text-center">
-              <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#intro">
-      <div class="scroll-down z-1 text-white"></div>
-    </a>
-  </section>
-
-  <section class="min-vh-100" id="intro">
-    <div class="container">
-      <div class="min-vh-100 d-flex justify-content-center align-items-center">
-        <div class="card rounded shadow my-5">
-          <div class="card-body">
-            <div class="container p-3">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div id="carouselImg" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100 rounded-4">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
-                          class="w-100 rounded-4">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="asset/img/plane-that-has-word-sa-it.jpg" alt="" class="w-100 rounded-4">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-4 col-lg-2">
-                      <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="img-fluid imgBnW"
-                        data-bs-target="#carouselImg" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
-                    </div>
-                    <div class="col-4 col-lg-2">
-                      <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg" alt=""
-                        class="img-fluid imgBnW" data-bs-target="#carouselImg" data-bs-slide-to="1" aria-current="true"
-                        aria-label="Slide 2">
-                    </div>
-                    <div class="col-4 col-lg-2">
-                      <img src="asset/img/plane-that-has-word-sa-it.jpg" alt="" class="img-fluid imgBnW"
-                        data-bs-target="#carouselImg" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="row">
-                    <p class="fs-3 fw-bold">Tentang Perusahaan :</p>
-                    <p>Garuda Transindo adalah perusahaan logistik terkemuka yang berkomitmen untuk menyediakan solusi
-                      transportasi yang efisien dan handal di seluruh Indonesia. Dengan armada truk modern dan tim
-                      profesional berpengalaman, kami siap mengantarkan barang Anda dengan aman dan tepat waktu. Kami
-                      bangga menjadi mitra terpercaya bagi berbagai industri dalam memenuhi kebutuhan pengiriman mereka.
-                    </p>
-                    <p class="fs-3 fw-bold">Misi Utama :</p>
-                    <p>Misi utama kami adalah memberikan layanan logistik yang unggul melalui inovasi, keandalan, dan
-                      dedikasi terhadap kepuasan pelanggan. Kami bertekad untuk terus meningkatkan standar layanan kami
-                      dengan mengadopsi teknologi terbaru dan praktik terbaik dalam industri, serta memastikan bahwa
-                      setiap pengiriman dilakukan dengan tingkat akurasi dan kecepatan yang tinggi.</p>
-                  </div>
-                  <div class="row">
-                    <div class="mt-3">
-                      <a class="btn btn-outline-danger" href="#">Cari tahu lebih lanjut mengenai pelayanan kami</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="min-vh-100 p-0" id="service">
-    <div class="row" style="max-width: 220vh;">
-      <div
-        class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-2 order-lg-1"
-        style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
-        <h1 class="position-absolute z-0 text-white gone outlineText">01</h1>
-        <div class="my-5 cardS z-1">
-          <div class="text-center">
-            <a href="service.html" class="text-s">
-              <h2 class="card-title fw-bold">General Freight</h2>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex justify-content-center z-0 order-1 order-lg-2"
-        style="background-image: url(asset/img/man-working-as-truck-driver-posing2.jpg);">
-        <div class="position-absolute text-center z-1">
-          <h1 class="fw-bold mt-5 text-uppercase textTesty">Layanan Kami</h1>
-        </div>
-        <h1 class="position-absolute z-0 text-white gone outlineText">02</h1>
-        <div class="d-flex align-items-center">
-          <div class="my-5 cardS z-1">
-            <div class="text-center">
-              <a href="service.html" class="text-s">
-                <h2 class="card-title fw-bold">Express Delivery</h2>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-3 order-lg-3"
-        style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
-        <h1 class="position-absolute z-0 text-white gone outlineText">03</h1>
-        <div class=" my-5 cardS z-1">
-          <div class=" text-center">
-            <a href="service.html" class="text-s">
-              <h2 class="card-title fw-bold">International Shipping</h2>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5" id="testy">
-    <div class="container">
-      <h1 class="fs-1 fw-bold text-center my-5 text-uppercase">Testimony Pelanggan</h1>
-      <div class="card border-0">
-        <div class="Swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-1.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h6 class="card-title">Hiroshi Tanaka</h6>
-                      <div class="row m-0 py-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Garuda Transindo memiliki layanan pengiriman yang sangat andal dan
-                    profesional. Mereka selalu tepat waktu dan menjaga barang dengan baik."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-2.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Aziz Rahman</h5>
-                      <div class="row m-0 py-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Layanan Garuda Transindo sangat memuaskan. Mereka selalu menjaga
-                    integritas dan keandalan dalam setiap pengiriman."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-3.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Nguyen Van Tuan</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Garuda Transindo memberikan layanan yang luar biasa. Pengiriman selalu
-                    tiba tepat waktu dan dalam kondisi sempurna."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-4.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Mei Lin</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Pengalaman saya dengan Garuda Transindo selalu positif. Mereka selalu
-                    memastikan pengiriman cepat dan aman."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-5.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h4 class="card-title">Li Wei</h4>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Pelayanan dari Garuda Transindo sangat memuaskan. Pengiriman selalu
-                    cepat dan aman."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-6.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Yuki Nakamura</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Garuda Transindo selalu memberikan pelayanan terbaik. Mereka sangat
-                    profesional dan dapat diandalkan."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-7.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Rajesh Kumar</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Garuda Transindo adalah perusahaan trucking yang sangat efisien. Mereka
-                    selalu memastikan pengiriman dilakukan dengan baik."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-8.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Ananda Wijaya</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Garuda Transindo adalah pilihan terbaik untuk kebutuhan logistik kami.
-                    Layanan mereka sangat profesional."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-9.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Ananya Patel</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Saya sangat menghargai layanan dari Garuda Transindo. Mereka selalu
-                    memberikan solusi logistik yang efisien dan tepat waktu."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-10.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Somchai Prasert</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Saya sangat merekomendasikan Garuda Transindo. Mereka selalu memberikan
-                    layanan terbaik dan menjaga kepuasan pelanggan."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-11.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Kim Min-jun</h5>
-                      <div class="row m-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Saya sangat terkesan dengan kehandalan Garuda Transindo. Mereka selalu
-                    menjaga kualitas layanan mereka."</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card cardST">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="asset/img/testy/P-12.jpg" alt="" class="rounded-circle border img-fluid">
-                    </div>
-                    <div class="col-9 p-0">
-                      <h5 class="card-title">Aung Kyaw</h5>
-                      <div class="row mx-0">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                        <img src="asset/img/star_11734042.png" alt="" class="star kuning p-0 mx-1">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="card-text my-2">"Garuda Transindo adalah perusahaan trucking yang sangat terpercaya.
-                    Mereka selalu memastikan pengiriman barang aman dan tepat waktu."</p>
-                </div>
-              </div>
-            </div>
-            <!-- Add more slides with cards as needed -->
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="min-vh-100" id="galery">
-    <h1 class="fs-1 fw-bold text-center text-uppercase my-5">Gallery</h1>
-    <div class="row">
-      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-        <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg"
-          class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
-
-        <img src="asset/img/man-working-as-truck-driver2.jpg" class="w-100 shadow-1-strong rounded mb-4"
-          alt="Wintry Mountain Landscape" />
-      </div>
-
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <img src="asset/img/man-working-as-truck-driver-posing2.jpg" class="w-100 shadow-1-strong rounded mb-4"
-          alt="Mountains in the Clouds" />
-
-        <img src="asset/img/trucks-8656643_1920.jpg" class="w-100 shadow-1-strong rounded mb-4"
-          alt="Boat on Calm Water" />
-      </div>
-
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <img src="asset/img/plane-that-has-word-sa-it.jpg" class="w-100 shadow-1-strong rounded mb-4"
-          alt="Waves at Sea" />
-
-        <img src="asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg"
-          class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
-      </div>
-    </div>
-    <!-- Gallery -->
-  </section>
-
-  <section class="p-0 position-relative">
-    <div class="d-flex justify-content-center">
-      <div class="card position-absolute bg-primary" style="width: 1200px;">
-        <div class="card-body text-white">
-          <div class="row">
-            <div class="col-8 ml-1">
-              <h2 class="fw-bold">Ada pertanyaan? Kami di Sini untuk Membantu Anda!</h2>
-              <p class="text-break">Garuda Transindo adalah salah satu penyedia angkutan truk angkut berat dan muatan besar terkemuka di Indonesia.</p>
-            </div>
-            <div class="col-2 d-flex align-items-center">
-              <h1 class="text-white position-absolute outlineText" style="font-size: 150px;">24/7</h1>
-            </div>
-            <div class="col-2 d-flex align-items-center justify-content-end">
-              <a class="btn btn-light">Lern more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-biru p-0 mt-5">
-      <div class="container">
-        <div class="row" style="padding-top: 130px;">
-          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
-            <div class="my-2 text-center">
-              <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt="" class="img-fluid"
-                style="height: 50px;">
-              <h6 class="fw-bold text-uppercase text-white mt-2">Garuda Transindo</h6>
-              <p class="text-white mx-4">Garuda Transindo adalah perusahaan logistik terkemuka yang menyediakan solusi pengiriman andal dan efisien untuk bisnis Anda.</p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-8">
-            <div class="row">
-              <div class="col-lg-4">
-                <h5 class="text-white">Contact</h5>
-                <ul class="nav nav-underline flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="#">Active</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Link</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Link</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link active px-3 text-white border-3" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-white" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-white" href="#">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-white" href="#">Contact</a>
+                    </li>
                 </ul>
-              </div>
-              <div class="col-lg-4">
-                <p>About</p>
-              </div>
-              <div class="col-lg-4">
-                <div class="d-flex align-items-center justify-content-center gap-2" style="height: 80px;">
-                  <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></button>
-                  <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></button>
-                  <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter"></i></button>
-                  <button type="button" class="btn btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></button>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <footer class="py-3 border-top border-white bg-biru">
-    <p class="text-center text-white m-0">@ 2024 Garuda Transindo | Arafian Hafiz</p>
-  </footer>
+    </nav>
 
-  <script>
-    $(window).scroll(function () {
-      $('nav').toggleClass('scrolled', $(this).scrollTop() > 600);
-    });
-  </script>
-  <script type="module">
-    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-    const swiper = new Swiper(".Swiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      grabCursor: true,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
+    <section class="min-vh-100" id="hero">
+        <video autoplay muted loop class="background-video z-n1">
+            <source src="asset/video/video.mp4" type="video/mp4">
+        </video>
+        <div class="position-absolute start-0 top-0 bg-dark gradient-custom z-1 w-100 bg-opacity-50 pb-3">
+            <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-lg-8">
+                        <div class="text-white text-center">
+                            <h1 class="fw-bold text-uppercase" style="font-size: 50px;">Garuda Transindo</h1>
+                            <p class="fs-5">Melayani Pengiriman dengan Kecepatan dan Keandalan</p>
+                            <button type="button" class="btn btn-danger px-5 text-white">Hubungi Kami</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="text-center">
+                            <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt=""
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#intro">
+            <div class="scroll-down z-1 text-white"></div>
+        </a>
+    </section>
+    
+    <section class="min-vh-100" id="intro">
+        <div class="container">
+            <div class="min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="card rounded shadow my-5">
+                    <div class="card-body">
+                        <div class="container p-3">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div id="carouselImg" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="asset/img/trucks-8656643_1920.jpg" alt=""
+                                                    class="w-100 rounded-4">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg"
+                                                    alt="" class="w-100 rounded-4">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="asset/img/plane-that-has-word-sa-it.jpg" alt=""
+                                                    class="w-100 rounded-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-4 col-lg-2">
+                                            <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="img-fluid imgBnW"
+                                                data-bs-target="#carouselImg" data-bs-slide-to="0" aria-current="true"
+                                                aria-label="Slide 1">
+                                        </div>
+                                        <div class="col-4 col-lg-2">
+                                            <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg"
+                                                alt="" class="img-fluid imgBnW" data-bs-target="#carouselImg"
+                                                data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
+                                        </div>
+                                        <div class="col-4 col-lg-2">
+                                            <img src="asset/img/plane-that-has-word-sa-it.jpg" alt=""
+                                                class="img-fluid imgBnW" data-bs-target="#carouselImg"
+                                                data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="row">
+                                        <p class="fs-3 fw-bold">Tentang Perusahaan :</p>
+                                        <p>Garuda Transindo adalah perusahaan logistik terkemuka yang berkomitmen untuk
+                                            menyediakan solusi
+                                            transportasi yang efisien dan handal di seluruh Indonesia. Dengan armada
+                                            truk modern dan tim
+                                            profesional berpengalaman, kami siap mengantarkan barang Anda dengan aman
+                                            dan tepat waktu. Kami
+                                            bangga menjadi mitra terpercaya bagi berbagai industri dalam memenuhi
+                                            kebutuhan pengiriman mereka.
+                                        </p>
+                                        <p class="fs-3 fw-bold">Misi Utama :</p>
+                                        <p>Misi utama kami adalah memberikan layanan logistik yang unggul melalui
+                                            inovasi, keandalan, dan
+                                            dedikasi terhadap kepuasan pelanggan. Kami bertekad untuk terus meningkatkan
+                                            standar layanan kami
+                                            dengan mengadopsi teknologi terbaru dan praktik terbaik dalam industri,
+                                            serta memastikan bahwa
+                                            setiap pengiriman dilakukan dengan tingkat akurasi dan kecepatan yang
+                                            tinggi.</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mt-3">
+                                            <a class="btn btn-outline-danger" href="#">Cari tahu lebih lanjut mengenai
+                                                pelayanan kami</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="min-vh-100 p-0" id="service">
+        <div class="row" style="max-width: 220vh;">
+            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-2 order-lg-1"
+                style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
+                <h1 class="position-absolute z-0 text-white gone outlineText">01</h1>
+                <div class="my-5 cardS z-1">
+                    <div class="text-center">
+                        <a href="service.html" class="text-s">
+                            <h2 class="card-title fw-bold">General Freight</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex justify-content-center z-0 order-1 order-lg-2"
+                style="background-image: url(asset/img/man-working-as-truck-driver-posing2.jpg);">
+                <div class="position-absolute text-center z-1">
+                    <h1 class="fw-bold mt-5 text-uppercase textTesty">Layanan Kami</h1>
+                </div>
+                <h1 class="position-absolute z-0 text-white gone outlineText">02</h1>
+                <div class="d-flex align-items-center">
+                    <div class="my-5 cardS z-1">
+                        <div class="text-center">
+                            <a href="service.html" class="text-s">
+                                <h2 class="card-title fw-bold">Express Delivery</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-3 order-lg-3"
+                style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
+                <h1 class="position-absolute z-0 text-white gone outlineText">03</h1>
+                <div class=" my-5 cardS z-1">
+                    <div class=" text-center">
+                        <a href="service.html" class="text-s">
+                            <h2 class="card-title fw-bold">International Shipping</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" id="testy">
+        <div class="container">
+            <h1 class="fs-1 fw-bold text-center my-5 text-uppercase">Testimony Pelanggan</h1>
+            <div class="card border-0">
+                <div class="Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-1.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h6 class="card-title">Hiroshi Tanaka</h6>
+                                            <div class="row m-0 py-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Garuda Transindo memiliki layanan pengiriman yang sangat
+                                        andal dan
+                                        profesional. Mereka selalu tepat waktu dan menjaga barang dengan baik."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-2.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Aziz Rahman</h5>
+                                            <div class="row m-0 py-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Layanan Garuda Transindo sangat memuaskan. Mereka selalu
+                                        menjaga
+                                        integritas dan keandalan dalam setiap pengiriman."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-3.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Nguyen Van Tuan</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Garuda Transindo memberikan layanan yang luar biasa.
+                                        Pengiriman selalu
+                                        tiba tepat waktu dan dalam kondisi sempurna."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-4.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Mei Lin</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Pengalaman saya dengan Garuda Transindo selalu positif.
+                                        Mereka selalu
+                                        memastikan pengiriman cepat dan aman."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-5.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h4 class="card-title">Li Wei</h4>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Pelayanan dari Garuda Transindo sangat memuaskan.
+                                        Pengiriman selalu
+                                        cepat dan aman."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-6.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Yuki Nakamura</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Garuda Transindo selalu memberikan pelayanan terbaik.
+                                        Mereka sangat
+                                        profesional dan dapat diandalkan."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-7.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Rajesh Kumar</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Garuda Transindo adalah perusahaan trucking yang sangat
+                                        efisien. Mereka
+                                        selalu memastikan pengiriman dilakukan dengan baik."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-8.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Ananda Wijaya</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Garuda Transindo adalah pilihan terbaik untuk kebutuhan
+                                        logistik kami.
+                                        Layanan mereka sangat profesional."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-9.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Ananya Patel</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Saya sangat menghargai layanan dari Garuda Transindo.
+                                        Mereka selalu
+                                        memberikan solusi logistik yang efisien dan tepat waktu."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-10.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Somchai Prasert</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt="" class="star  p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Saya sangat merekomendasikan Garuda Transindo. Mereka
+                                        selalu memberikan
+                                        layanan terbaik dan menjaga kepuasan pelanggan."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-11.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Kim Min-jun</h5>
+                                            <div class="row m-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Saya sangat terkesan dengan kehandalan Garuda Transindo.
+                                        Mereka selalu
+                                        menjaga kualitas layanan mereka."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card cardST">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="asset/img/testy/P-12.jpg" alt=""
+                                                class="rounded-circle border img-fluid">
+                                        </div>
+                                        <div class="col-9 p-0">
+                                            <h5 class="card-title">Aung Kyaw</h5>
+                                            <div class="row mx-0">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                                <img src="asset/img/star_11734042.png" alt=""
+                                                    class="star kuning p-0 mx-1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="card-text my-2">"Garuda Transindo adalah perusahaan trucking yang sangat
+                                        terpercaya.
+                                        Mereka selalu memastikan pengiriman barang aman dan tepat waktu."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="min-vh-100" id="galery">
+        <h1 class="fs-1 fw-bold text-center text-uppercase my-5">Gallery</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="asset/img/busy-shipping-port-with-containers-trade-action.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+                <img src="asset/img/man-working-as-truck-driver2.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Wintry Mountain Landscape" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="asset/img/man-working-as-truck-driver-posing2.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Mountains in the Clouds" />
+
+                <img src="asset/img/trucks-8656643_1920.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Boat on Calm Water" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="asset/img/plane-that-has-word-sa-it.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Waves at Sea" />
+
+                <img src="asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div class="bg-biru p-0 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
+                        <div class="my-2">
+                            <div class="d-flex justify-content-center">
+                                <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt=""
+                                class="img-fluid" style="height: 50px;">
+                            <h6 class="fw-bold text-uppercase text-white mt-3">Garuda Transindo</h6>
+                            </div>
+                            <p class="text-white mx-4">Garuda Transindo adalah perusahaan logistik terkemuka yang
+                                menyediakan solusi pengiriman andal dan efisien untuk bisnis Anda.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h5 class="text-white">Contact</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-home me-2"></i> 1234 Street Name, City, Country
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope me-2"></i> info@example.com
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone me-2"></i> + 01 234 567 88
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-print me-2"></i> + 01 234 567 89
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <p class="text-white">About</p>
+                                <ul class="nav nav-underline flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" aria-current="page" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">Service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5>Follow us</h5>
+                                <div class="d-flex align-items-center justify-content-center gap-2"
+                                    style="height: 80px;">
+                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                            class="bi bi-linkedin"></i></button>
+                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                            class="bi bi-facebook"></i></button>
+                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                            class="bi bi-twitter"></i></button>
+                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                            class="bi bi-instagram"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-3 border-top border-white bg-biru">
+        <p class="text-center text-white m-0">@ 2024 Garuda Transindo | Arafian Hafiz</p>
+    </footer>
+
+    <script>
+        $(window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 600);
+        });
+    </script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+        const swiper = new Swiper(".Swiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
