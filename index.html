@@ -19,6 +19,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
         .bg-dark {
             transition: 0.5s ease;
         }
@@ -56,6 +62,10 @@
 
         .imgbg {
             filter: grayscale(100%);
+        }
+
+        .text-s1 {
+            text-shadow: 4px 4px #1c1c1c;
         }
 
         .imgbg:hover,
@@ -217,7 +227,7 @@
             <div class="scroll-down z-1 text-white"></div>
         </a>
     </section>
-    
+
     <section class="min-vh-100" id="intro">
         <div class="container">
             <div class="min-vh-100 d-flex justify-content-center align-items-center">
@@ -299,7 +309,10 @@
 
     <section class="min-vh-100 p-0" id="service">
         <div class="row" style="max-width: 220vh;">
-            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-2 order-lg-1"
+            <div class="position-absolute text-center z-1">
+                <h1 class="fw-bold mt-5 text-uppercase text-white text-s1">Layanan Kami</h1>
+            </div>
+            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center "
                 style="background-image: url(asset/img/man-working-as-truck-driver2.jpg);">
                 <h1 class="position-absolute z-0 text-white gone outlineText">01</h1>
                 <div class="my-5 cardS z-1">
@@ -310,23 +323,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex justify-content-center z-0 order-1 order-lg-2"
+            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
                 style="background-image: url(asset/img/man-working-as-truck-driver-posing2.jpg);">
-                <div class="position-absolute text-center z-1">
-                    <h1 class="fw-bold mt-5 text-uppercase textTesty">Layanan Kami</h1>
-                </div>
                 <h1 class="position-absolute z-0 text-white gone outlineText">02</h1>
-                <div class="d-flex align-items-center">
-                    <div class="my-5 cardS z-1">
-                        <div class="text-center">
-                            <a href="service.html" class="text-s">
-                                <h2 class="card-title fw-bold">Express Delivery</h2>
-                            </a>
-                        </div>
+                <div class="my-5 cardS z-1">
+                    <div class="text-center">
+                        <a href="service.html" class="text-s">
+                            <h2 class="card-title fw-bold">Express Delivery</h2>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center order-3 order-lg-3"
+            <div class="col-12 col-lg-4 img-fluid imgbg min-vh-100 d-flex align-items-center justify-content-center"
                 style="background-image: url(asset/img/vertical-shot-old-ship-lake-colorful-sky-sunset2.jpg);">
                 <h1 class="position-absolute z-0 text-white gone outlineText">03</h1>
                 <div class=" my-5 cardS z-1">
@@ -746,64 +754,61 @@
         <div class="bg-biru p-0 pt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
-                        <div class="my-2">
+                    <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center">
+                        <div class="mb-2">
                             <div class="d-flex justify-content-center">
                                 <img src="asset/img/—Pngtree—garuda logo with flaming fire_8796236.png" alt=""
-                                class="img-fluid" style="height: 50px;">
-                            <h6 class="fw-bold text-uppercase text-white mt-3">Garuda Transindo</h6>
+                                    class="img-fluid" style="height: 50px;">
+                                <h6 class="fw-bold text-uppercase text-white mt-3">Garuda Transindo</h6>
                             </div>
-                            <p class="text-white mx-4">Garuda Transindo adalah perusahaan logistik terkemuka yang
+                            <p class="text-white mt-2">Garuda Transindo adalah perusahaan logistik terkemuka yang
                                 menyediakan solusi pengiriman andal dan efisien untuk bisnis Anda.</p>
+                            <div class="text-center gap-2" style="height: 80px;">
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-linkedin"></i></button>
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-facebook"></i></button>
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-twitter"></i></button>
+                                <button type="button" class="btn btn-outline-light rounded-circle"><i
+                                        class="bi bi-instagram"></i></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-8">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <h5 class="text-white">Contact</h5>
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <i class="fas fa-home me-2"></i> 1234 Street Name, City, Country
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-envelope me-2"></i> info@example.com
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-phone me-2"></i> + 01 234 567 88
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-print me-2"></i> + 01 234 567 89
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4">
-                                <p class="text-white">About</p>
-                                <ul class="nav nav-underline flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" aria-current="page" href="#">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" href="#">Service</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" href="#">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4">
-                                <h5>Follow us</h5>
-                                <div class="d-flex align-items-center justify-content-center gap-2"
-                                    style="height: 80px;">
-                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
-                                            class="bi bi-linkedin"></i></button>
-                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
-                                            class="bi bi-facebook"></i></button>
-                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
-                                            class="bi bi-twitter"></i></button>
-                                    <button type="button" class="btn btn-outline-light rounded-circle"><i
-                                            class="bi bi-instagram"></i></button>
-                                </div>
-                            </div>
+                    <div class="col-12 col-lg-4 mb-2">
+                        <h5 class="text-white m-3 fw-bold text-lg-start text-center">Contact</h5>
+                        <ul class="list-unstyled m-1">
+                            <li class="text-white mb-2">
+                                <i class="bi bi-geo-alt-fill mx-2"></i> 1234 Street Name, City, Country
+                            </li>
+                            <li class="text-white">
+                                <i class="bi bi-telephone-fill mx-2"></i> + 01 234 567 88
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-2 mb-2">
+                        <h5 class="text-white m-3 fw-bold text-lg-start text-center">About</h5>
+                        <ul class="nav nav-underline flex-column">
+                            <li class="nav-item p-0">
+                                <a class="nav-link text-white p-0" aria-current="page" href="#">About</a>
+                            </li>
+                            <li class="nav-item p-0">
+                                <a class="nav-link text-white p-0" href="#">Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white p-0" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-3 mb-2">
+                        <h5 class="text-white m-3 fw-bold text-lg-start text-center">Subscribe</h5>
+                        <p class="text-white m-0">Subscribe kami!</p>
+                        <p class="text-white m-0"> Ikuti berita terbaru!</p>
+                        <div class="input-group my-3">
+                            <input type="text" class="form-control" placeholder="Your Email"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                    class="bi bi-envelope-fill"></i></button>
                         </div>
                     </div>
                 </div>
