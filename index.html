@@ -673,6 +673,12 @@
         <p class="text-center text-white m-0">@ 2024 Garuda Transindo | Arafian Hafiz</p>
     </footer>
 
+
+    <script>
+        $(window).scroll(function () {
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 10);
+        });
+    </script>
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
         const swiper = new Swiper(".Swiper", {
