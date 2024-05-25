@@ -9,19 +9,21 @@ body {
     font-style: normal;
   }
   
-  * .fw-bold{
+  .bg-dark {
+    background-color: rgba(13, 110, 253, 0.01) !important;
+}
+
+.bg-dark.scrolled {
+    background-color: rgba(13, 110, 253, 1) !important;
+    
+}
+
+  .fw-bold{
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
-  
-.bg-dark {
-    transition: 0.5s ease;
-}
 
-.bg-dark.scrolled {
-    background: #003366 !important;
-}
 
 .background-video {
     position: absolute;
