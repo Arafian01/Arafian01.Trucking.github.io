@@ -8,13 +8,9 @@ body {
     font-weight: 400;
     font-style: normal;
   }
-  
-  .bg-dark {
-    background-color: rgba(13, 110, 253, 0.01) !important;
-}
 
-.bg-dark.scrolled {
-    background-color: rgba(0, 51, 102, 1) !important;
+.bg-dark {
+    background-color: #003366 !important;
     
 }
 
