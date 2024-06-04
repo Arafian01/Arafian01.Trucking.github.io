@@ -153,3 +153,15 @@ body {
 .bg-biru {
     background-color: #003366;
 }
+
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
