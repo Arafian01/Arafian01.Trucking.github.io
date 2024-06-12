@@ -270,55 +270,91 @@
       </div>
     </section>
 
-    <section class="min-vh-100 pt-5">
+    <section class="min-vh-100 pt-5 bg-secondary bg-opacity-25">
       <div class="container">
-        <div class="card reveal">
-          <div class="card-body">
-            <h2 class="text-center mb-4 fw-bold">Visi dan Misi Kami</h2>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="accordion" id="accordionFlushExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button z-1 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        VISI
-                      </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        <p>
-                          Menjadi penyedia layanan logistik terkemuka yang
-                          diakui karena keunggulan dalam kecepatan, keamanan,
-                          dan kehandalan pengiriman di seluruh Indonesia dan
-                          internasional.
-                        </p>
+        <div class="d-flex align-items-center min-vh-100">
+          <div class="card reveal">
+            <div class="card-body">
+              <h2 class="text-center mb-4 fw-bold">Visi dan Misi Kami</h2>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="accordion" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button z-1 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                          VISI
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <p>
+                            Menjadi penyedia layanan logistik terkemuka yang
+                            diakui karena keunggulan dalam kecepatan, keamanan,
+                            dan kehandalan pengiriman di seluruh Indonesia dan
+                            internasional.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed z-1 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          MISI
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <p>
+                            Memberikan layanan logistik yang unggul melalui
+                            inovasi, keandalan, dan dedikasi terhadap kepuasan
+                            pelanggan. Kami bertekad untuk terus meningkatkan
+                            standar layanan kami dengan mengadopsi teknologi
+                            terbaru dan praktik terbaik dalam industri.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed z-1 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        MISI
-                      </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        <p>
-                          Memberikan layanan logistik yang unggul melalui
-                          inovasi, keandalan, dan dedikasi terhadap kepuasan
-                          pelanggan. Kami bertekad untuk terus meningkatkan
-                          standar layanan kami dengan mengadopsi teknologi
-                          terbaru dan praktik terbaik dalam industri.
-                        </p>
-                      </div>
-                    </div>
+                </div>
+                <div class="col-lg-6 col-none">
+                  <div class="card">
+                    <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100" />
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-none">
-                <div class="card">
-                  <img src="asset/img/trucks-8656643_1920.jpg" alt="" class="w-100" />
-                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="min-vh-100">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
               </div>
             </div>
           </div>
@@ -412,6 +448,41 @@
       </p>
     </footer>
 
+    <script>
+      //JavaScript
+var chart = new OrgChart(document.getElementById("tree"), {
+    template: "ana",
+    layout: OrgChart.tree,    
+    mouseScrool: OrgChart.none,
+    align: OrgChart.ORIENTATION,
+    toolbar: {
+        layout: true,
+        zoom: true,
+        fit: true,
+        expandAll: true
+    },
+    nodeBinding: {
+        field_0: "name",
+    }
+});
+
+chart.on('init', function (sender) {
+    sender.toolbarUI.showLayout();
+});
+
+chart.load([
+    { id: 1, name: "Jack Hill", },
+    { id: 2, pid: 1, name: "Lexie Cole" },
+    { id: 3, pid: 1, name: "Janae Barrett" },
+    { id: 4, pid: 2, name: "Elliot Ross" },
+    { id: 5, pid: 2, name: "Anahi Gordon" },
+    { id: 6, pid: 2, name: "Nash Ingram" },
+    { id: 7, pid: 3, name: "Alice Gray" },
+    { id: 8, pid: 3, name: "Anne Ewing" },
+    { id: 9, pid: 3, name: "Reuben Mcleod" },
+]);
+
+    </script>
     <script src="asset/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

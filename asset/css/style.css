@@ -20,6 +20,21 @@ body {
     font-style: normal;
   }
 
+  .btn-primary {
+    background-color: #003366 !important;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: rgb(21, 119, 255) !important;
+  }
+  .btn-outline-primary{
+    border-color: #003366 !important;
+    color: #003366 !important;
+  }
+  .btn-outline-primary:hover{
+    background-color: #003366 !important;
+    color: white !important;
+  }
 
 .background-video {
     position: absolute;
