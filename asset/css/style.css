@@ -180,6 +180,18 @@ body {
     transform: translateY(0px);
     opacity: 1;
 }
+.animate__animated.animate__bounceInLeft,
+.animate__animated.animate__bounceInRight,
+.animate__animated.animate__bounceInUp,
+.animate__animated.animate__fadeInLeft,
+.animate__animated.animate__fadeInRight,
+.animate__animated.animate__fadeceInUp {
+    opacity: 1;
+}
+
+.animate__animated {
+    opacity: 0;
+}
 
 .slide-in-right {
 	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
