@@ -2862,8 +2862,16 @@
 .hvr-glow:focus,
 .hvr-glow:active {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-
+    cursor: pointer;
 }
+/* .hvr-glow:hover .card-body ,
+.hvr-glow:focus .card-body,
+.hvr-glow:active.card-body,
+.hvr-glow:hover .card-img-top,
+.hvr-glow:focus .card-img-top,
+.hvr-glow:active .card-img-top{
+
+} */
 
 /* Shadow */
 .hvr-shadow {
